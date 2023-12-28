@@ -1,0 +1,270 @@
+body {
+	margin: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(main.gif);
+	
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: -50px;
+
+	font-family: sans-serif;
+	;
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+
+}
+/* .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+	height: 40px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #ff7200;
+    color: white;
+  } */
+.slider {
+	width: 100%
+}
+
+.slider input {
+	display: none;
+}
+
+.testimonials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	min-height: 350px;
+	perspective: 1000px;
+	overflow: hidden;
+	top: 200px;
+	padding-bottom: 180px;
+	/* margin-bottom: 1000px; */
+	/* top: 20px; */
+	padding-right: 300px;
+	left: -560px; 
+
+}
+
+.testimonials .item {
+	width: 300px;
+	padding: 30px;
+	border-radius: 20px;
+	/* background-color: #21262d; */
+	position: absolute;
+	/* border:3px solid white; */
+	top: 0;
+	/* box-sizing: border-box; */
+	text-align: center;
+	transition: transform 0.4s;
+	/* box-shadow: 0 0 10px rgba(0,0,0,0.3); */
+	user-select: none;
+	cursor: pointer;
+	margin-bottom: 200px;
+}
+
+.testimonials .item h1 {
+	font-size: 114px;
+	color: white;
+}
+
+.dots {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	top: -950px;
+	padding-right: 200px;
+	left: -200px;
+	padding-top: 50px;
+	padding-bottom: 230px;
+	padding-right: 400px;
+}
+
+.dots label {
+	position: relative;
+	height: 40px;
+	width: 120px;
+	border-radius: 5%;
+	cursor: pointer;
+	background-color: black;
+	margin: 7px;
+	transition-duration: 0.2s;
+	bottom: -1100px;
+	text-align: center;
+}
+
+#t-1:checked~.dots label[for="t-1"],
+#t-2:checked~.dots label[for="t-2"],
+#t-3:checked~.dots label[for="t-3"],
+#t-4:checked~.dots label[for="t-4"],
+#t-5:checked~.dots label[for="t-5"] {
+	transform: scale(2);
+	background-color: #ff7200;
+	box-shadow: 0px 0px 0px 3px #dddddd24;
+}
+
+#t-1:checked~.dots label[for="t-2"],
+#t-2:checked~.dots label[for="t-1"],
+#t-2:checked~.dots label[for="t-3"],
+#t-3:checked~.dots label[for="t-2"],
+#t-3:checked~.dots label[for="t-4"],
+#t-4:checked~.dots label[for="t-3"],
+#t-4:checked~.dots label[for="t-5"],
+#t-5:checked~.dots label[for="t-4"] {
+	transform: scale(1.5);
+}
+
+#t-1:checked~.testimonials label[for="t-3"],
+#t-2:checked~.testimonials label[for="t-4"],
+#t-3:checked~.testimonials label[for="t-5"],
+#t-4:checked~.testimonials label[for="t-1"],
+#t-5:checked~.testimonials label[for="t-2"] {
+	transform: translate3d(600px, 0, -180px) rotateY(-25deg);
+	z-index: 2;
+}
+
+#t-1:checked~.testimonials label[for="t-2"],
+#t-2:checked~.testimonials label[for="t-3"],
+#t-3:checked~.testimonials label[for="t-4"],
+#t-4:checked~.testimonials label[for="t-5"],
+#t-5:checked~.testimonials label[for="t-1"] {
+	transform: translate3d(300px, 0, -90px) rotateY(-15deg);
+	z-index: 3;
+}
+
+#t-2:checked~.testimonials label[for="t-1"],
+#t-3:checked~.testimonials label[for="t-2"],
+#t-4:checked~.testimonials label[for="t-3"],
+#t-5:checked~.testimonials label[for="t-4"],
+#t-1:checked~.testimonials label[for="t-5"] {
+	transform: translate3d(-300px, 0, -90px) rotateY(15deg);
+	z-index: 3;
+}
+
+#t-3:checked~.testimonials label[for="t-1"],
+#t-4:checked~.testimonials label[for="t-2"],
+#t-5:checked~.testimonials label[for="t-3"],
+#t-2:checked~.testimonials label[for="t-5"],
+#t-1:checked~.testimonials label[for="t-4"] {
+	transform: translate3d(-600px, 0, -180px) rotateY(25deg);
+
+}
+
+#t-1:checked~.testimonials label[for="t-1"],
+#t-2:checked~.testimonials label[for="t-2"],
+#t-3:checked~.testimonials label[for="t-3"],
+#t-4:checked~.testimonials label[for="t-4"],
+#t-5:checked~.testimonials label[for="t-4"],
+#t-5:checked~.testimonials label[for="t-5"] {
+
+	z-index: 4;
+}
+
+/* .ap{
+
+} */
+.h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+	text-align: center;
+	left: 500px;
+	top: -300px;
+	font-size: 20px;
+}
+
+.d1 {
+	position: relative;
+	left: -250px;
+}
+
+.d2 {
+	position: relative;
+	left: -140px;
+}
+
+.d3 {
+	position: relative;
+	left: -25px;
+}
+
+.d4 {
+	position: relative;
+	left: 90px;
+}
+
+.d5 {
+	position: relative;
+	left: 210px;
+}
+footer
+{
+    position: fixed;
+    text-align: center;
+    background-color: black;
+    color: white;
+    bottom: 0px;
+    width: 100%;
+    height: 90px;
+    align-items: center;
+	
+}
+footer p{
+	margin: 0px;
+}
+.i1{
+    position: absolute;
+    left:1580px;
+    /* top: 500px; */
+    bottom: 30px;
+}
+.i2{
+    position: absolute;
+    left:1640px;
+    bottom: 30px;
+}.i3{
+    position: absolute;
+    left:1700px;
+    bottom: 30px;
+}.i4{
+    position: absolute;
+    left:1760px;
+    bottom: 30px;
+}.i5{
+    position: absolute;
+    left:1820px;
+    bottom:30px;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+    float: right;
+    
+}
+.icons ion-icon{
+    color: white;
+    font-size: 50px;
+    padding-left: 25px;
+    padding-top: 10px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #ff7200;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iTunes Search</title>
+  <link rel="stylesheet" href="../static/search.css">
+</head>
+<body style="background-image: url(../static/yellow_bk10.jpg);">
+  <div class="topnav" style="background-color: black; padding-left: 32%; height: 8%; padding-top: 1%; position: fixed" >
+    <i style="color: white;position: absolute; left: 30px;font-size: 50px;top: 17px; ">BeatStreet</i>
+    <i style="color: white;position: absolute; left: 1650px;font-size: 50px;top: 17px; ">Search Page</i>
+   
+    <a href="/sample" style="font-size: 25px;margin-right: 20px;">Home</a>
+    <a href="/artistpage" style="font-size: 25px;margin-right: 20px;" >Artists</a>
+    <a href="/spotlight" style="font-size: 25px;margin-right: 20px;" >Spotlight</a>
+    <a href="/me" style="font-size: 25px;margin-right: 20px;" >About</a>
+    <a href="/search" style="font-size: 25px;margin-right: 20px;" class="active">Search</a>
+    <a href="/playlist" style="font-size: 25px;margin-right: 20px;" >Playlist</a>
+  </div>
+  <br><br><br><br><br>
+  <div class="container">
+    
+    <!-- <form onsubmit="search(event)"> -->
+      <input type="text" placeholder="Search iTunes..." id="search-input" class="btn" style="font-size: 30px;">
+      <button type="submit" class="sbtn" style="font-size: 25px;" id="search-form" onclick="search(event)">Search</button>
+    <!-- </form> -->
+    <br>
+    <ul id="results"></ul>
+  </div>
+  <label for="durationFilter" id="label" style="color: black; position: relative; left: 180px; top: -130px;"><b>Filter by Duration:</b></label>
+<input type="number" id="duration-input" name="durationFilter" placeholder="Enter duration(min)" class="text">
+<!-- <form onsubmit="search(event)">
+<button id="filterButton">Filter</button>
+</form> -->
+<button  type="button" id="reset-btn" onclick="clearResults()">Clear</button>
+
+<label for="explicit" id="ex" style="color: black; position: relative ; left: 1200px; top: -120px;"><b>Filter by Explicitness</b></label>
+<label for="yes" id="lab1" style="color: black;"><b>Explicit</b></label>
+<input type="radio" id="yes">
+<!-- <label for="no" id="lab2" style="color: black;"><b>Non-Explicit</b></label>
+<input type="radio" id="no"> -->
+
+<button id="filter-btn" class="filter">Filter</button>
+<div id="search-results"></div>
+  <script src="../static/search.js"></script>
+</body>
+<footer>
+  <p style="font-size: 20px;">
+   At BeatStreet, our mission is to create music that inspires and connects people.<br> We believe in the power of music to bring people together, to heal, to uplift, and to transform. We are grateful for your support and we hope our music can make a positive impact on your life.
+  </p>
+  </footer>
+</html>
+
+
+
+

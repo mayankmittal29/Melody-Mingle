@@ -1,0 +1,3 @@
+I have taken an assumption that on first page of website ,when I enter my username and password and on pressing sign up button i will be redirected to my home page of my website. Also I have made a button "EXPLORE NOW" which is doing work of 'Free sign in to my website' for new users. ABOUT Button will lead you to the About page which contains the information about the founders of BeatStreet.
+
+THANKS!

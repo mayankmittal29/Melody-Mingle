@@ -1,0 +1,180 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  /* padding: 0; */
+  background-image: url(main.gif);
+  /* background-repeat: no-repeat; */
+  /* background-position: centre;
+  background-position-y: 90px; */
+  width: 100%;
+  height: 100%;
+ }
+.header {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+} */
+
+/* h1 {
+  margin: 0;
+} */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.artist-image {
+  max-width: 20%;
+  height: auto;
+  position: relative;
+  animation-name: zoom;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  top: 170px;
+  left: 100px;
+}
+@keyframes zoom {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+.review-box {
+  position: absolute;
+  border: 2px solid black;
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  top: 600px;
+  left: 500px;
+ color: lineargradient(to right , (#ff7200 , beige));
+ height: 300px;
+}
+
+b {
+  z-index: -1000;
+}
+
+
+
+.aboutap {
+    position: relative;
+    font-size:24px ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    top: -170px;
+    left: 600px;
+}
+.clock{
+  position: absolute;
+    /* position: relative; */
+    padding-left: 70px;
+    font-size: 30px;
+    /* font-family: 'Space Grotesk', sans-serif;
+    text-align: center;
+    bottom: 310px;*/
+    top: 600px; 
+    color: white;
+    z-index: -999;
+
+}
+footer
+{
+    position: fixed;
+    text-align: center;
+    background-color: black;
+    color: white;
+    bottom: 0px;
+    width: 100%;
+    height: 90px;
+    align-items: center;
+	
+}
+footer p{
+	margin: 0px;
+}
+.i1{
+    position: absolute;
+    left:1580px;
+    /* top: 500px; */
+    bottom: 30px;
+}
+.i2{
+    position: absolute;
+    left:1640px;
+    bottom: 30px;
+}.i3{
+    position: absolute;
+    left:1700px;
+    bottom: 30px;
+}.i4{
+    position: absolute;
+    left:1760px;
+    bottom: 30px;
+}.i5{
+    position: absolute;
+    left:1820px;
+    bottom:30px;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+    float: right;
+    
+}
+.icons ion-icon{
+    color: white;
+    font-size: 50px;
+    padding-left: 25px;
+    padding-top: 10px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #ff7200;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ff7200;
+  color: white;
+}
+
+th {
+  font-size: 30px;
+}
+
+td {
+  border: black solid;
+}
+th {
+  border: black solid;
+}

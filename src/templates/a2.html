@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link href="../static/a1.css" rel="stylesheet">
+    <style>
+        .grid-item{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body style="background-image: linear-gradient(to left , #ead0d5 , white);">
+    <div class="topnav">
+        <a href="/sample" class="t1">HOME</a>
+        <a href="/spotlight" class="t2">SPOTLIGHT</a>
+        <a href="/artistpage" class="t3">ARTISTS</a>
+        <a class="t4"href="/a2">SONG</a>
+        <a href="/me"class="t5">ABOUT</a>
+        <a href="/playlist"class="t6">PLAYLIST</a>
+      </div>
+    <span>
+   <img class="fit" src="../static/AP2.jpg" >
+   </span> 
+   <span class="heading1"><i><b>Hidden Gems</b></i><br></span>
+   <span class="heading2"><i>AP Dhillon</i><br></span>
+   <span class="heading3"><i>2021</i><br></span>
+   <!-- <div>
+    <span class="list"><pre><i>Desires     2:48<br>Tere Te     1:54<br>Majhe Aale  2:50<br>Spaceship   2:04<br>War         3:41</i></pre></span>
+   </div> -->
+   <!-- <span class="grid-container">
+    <div class="grid-item">Desires</div>
+    <div class="grid-item">2:48</div>
+    <div class="grid-item"><button style="width: 100px;height: 30px;font-size: 20px;">+</button></div>
+    <div class="grid-item">Tere Te</div>
+    <div class="grid-item">1:54</div>
+    <div class="grid-item"><button style="width: 100px;height: 30px;font-size: 20px;">+</button></div>
+    <div class="grid-item">Majhe Aale</div>
+    <div class="grid-item">2:50</div>
+    <div class="grid-item"><button style="width: 100px;height: 30px;font-size: 20px;">+</button></div>
+    <div class="grid-item">Spaceship</div>
+    <div class="grid-item">2:04</div>
+    <div class="grid-item"><button style="width: 100px;height: 30px;font-size: 20px;">+</button></div>
+    <div class="grid-item">War</div>
+    <div class="grid-item">3:41</div>
+    <div class="grid-item"><button style="width: 100px;height: 30px;font-size: 20px;">+</button></div>
+   </span> -->
+   <table>
+    <tr>
+     <th>Song Name</th>
+     <th>Duration</th>
+     <th>Action</th>
+ </tr>
+ <tr>
+     <td>Desires</td>
+     <td>2:48</td>
+     <td>
+         <button class="plus" onclick="addSong('Desires', '2:48','AP Dhillon', this)">+</button>
+     </td>
+ </tr>
+ <tr>
+     <td>Tere Te</td>
+     <td>1:54</td>
+     <td>
+         <button class="plus" onclick="addSong('Tere Te', '1:54','AP Dhillon', this)">+</button>
+     </td>
+ </tr>
+ <tr>
+     <td>Majhe Aale</td>
+     <td>2:50</td>
+     <td>
+         <button class="plus" onclick="addSong('Majhe Aale', '2:50','AP Dhillon', this)">+</button>
+     </td>
+ </tr>
+ <tr>
+     <td>Spaceship</td>
+     <td>2:04</td>
+     <td>
+         <button class="plus" onclick="addSong('Spaceship', '2:04','AP Dhillon', this)">+</button>
+     </td>
+ </tr>
+ <tr>
+     <td>War</td>
+     <td>3:41</td>
+     <td>
+         <button class="plus" onclick="addSong('War', '3:41','AP Dhillon', this)">+</button>
+     </td>
+ </tr>
+ </table>
+ <script>
+ function addSong(name, duration,artist, button) {
+     if (button.classList.contains('plus')) {
+         button.classList.remove('plus');
+         button.classList.add('tick');
+         button.textContent="✔";
+         fetch('/add_song', {
+             method: 'POST',
+             headers: {
+                 'Content-Type': 'application/json'
+             },
+             body: JSON.stringify({name: name, duration: duration,artist: artist, pagename: '/a2.html'})
+         }).then(response => {
+             if (response.ok) {
+                 alert('Song added successfully!');
+             } else {
+                 alert('Failed to add song.');
+             }
+         });
+     } else {
+         button.classList.remove('tick');
+         button.classList.add('plus');
+         button.textContent="+";
+         fetch('/delete_song', {
+             method: 'POST',
+             headers: {
+                 'Content-Type': 'application/json'
+             },
+             body: JSON.stringify({name: name, duration: duration,artist: artist,pagename: '/a2.html'})
+         }).then(response => {
+             if (response.ok) {
+                 alert('Song deleted successfully!');
+             } else {
+                 alert('Failed to delete song.');
+             }
+         });
+     }
+ }
+ </script>
+</body>
+   <footer>
+    <p style="font-size: 20px;">
+     At BeatStreet, our mission is to create music that inspires and connects people.<br> We believe in the power of music to bring people together, to heal, to uplift, and to transform. We are grateful for your support and we hope our music can make a positive impact on your life.
+    </p>
+    </footer>
+</html>

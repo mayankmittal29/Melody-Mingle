@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../static/artistpage.css" />
+    <style>
+      .topnav {
+    overflow: hidden;
+    position: fixed;
+        background-color: black;
+        padding-left: 32%;
+        height: 8%;
+        padding-top: 1%;
+        display: flex;
+        flex-direction: row;
+        width: 68%;
+        top: 0px;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+	height: 40px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #ff7200;
+    color: white;
+  }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+	<i style="color: white;position: absolute; left: 30px; font-size: 50px; top: 17px;">BeatStreet</i>
+  <i style="color: white;position: absolute; left: 1659px;font-size: 50px;top: 17px; ">Top Artists</i>
+      <a href="/sample"style="font-size: 25px; margin-right: 25px">Home</a>
+      <a href="/artistpage" style="font-size: 25px; margin-right: 20px" class="active">Artists</a>
+      <a href="/spotlight" style="font-size: 25px; margin-right: 20px">Spotlight</a>
+      <a href="/me" style="font-size: 25px; margin-right: 20px">About</a>
+      <a href="/search" style="font-size: 25px; margin-right: 20px">Search</a>
+      <a href="/playlist" style="font-size: 25px;margin-right: 20px;" >Playlist</a>
+    </div>
+
+    <span class="h1" style="width: 100%;font-size: 80px;
+          font-family: 'Courier New', Courier, monospace;
+          font-weight: bold;
+		  width: 100%;">
+      
+    </span>
+    <div class="slider">
+      <input type="radio" name="testimonial" id="t-1" />
+      <input type="radio" name="testimonial" id="t-2" />
+      <input type="radio" name="testimonial" id="t-3" checked />
+      <input type="radio" name="testimonial" id="t-4" />
+      <input type="radio" name="testimonial" id="t-5" />
+      <div class="testimonials" style="width: 100%;">
+        <label class="item" for="t-1">
+          <a href="/album3">
+            <img src="../static/ap.jpg" width="400px" height="440px"
+          /></a>
+        </label>
+        <label class="item" for="t-2">
+          <a href="/album4"
+            ><img src="../static/zaynmalik.webp" width="400px" height="440px"
+          /></a>
+        </label>
+        <label class="item" for="t-3">
+          <a href="/album2"
+            ><img src="../static/SM5.jpeg" width="400px" height="440px"
+          /></a>
+        </label>
+        <label class="item" for="t-4">
+          <a href="/album1"
+            ><img src="../static/drake.jpeg" width="400px" height="440px"
+          /></a>
+        </label>
+        <label class="item" for="t-5">
+          <a href="/album5"
+            ><img src="../static/weeknd.jpg" width="400px" height="440px"
+          /></a>
+        </label>
+      </div>
+      <br />
+      <div class="dots">
+        <label for="t-1" class="d1" style="color: white;">AP DHILLON</label>
+        <label for="t-2" class="d2" style="color: white;">ZAYN MALIK</label>
+        <label for="t-3" class="d3" style="color: white;">SHAWN MENDES</label>
+        <label for="t-4" class="d4" style="color: white;">DRAKE</label>
+        <label for="t-5" class="d5" style="color: white;">THE WEEKND</label>
+      </div>
+    </div>
+   
+  <footer>
+        <!-- <p color = "white" style="left: 100px;">About</p> -->
+        <p style="font-size: 20px;position: absolute; left: 20px; text-align: left;bottom: 10px;">
+         <br>At BeatStreet, our mission is to create music that inspires and connects people.<br> We believe in the power of music to bring people together, to heal, to uplift, and to transform.</br>
+         We are grateful for your support and we hope our music can make a positive impact on your life.
+        </p>
+        <a href="/me" style="color: beige; position:absolute; bottom: 25px; left: 1500px;font-size: 30px;text-decoration: none; ">About</a>
+<div class="icons" style="position: absolute; bottom: -17px;">
+    <a class="i1" href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a>
+    <a class="i2" href="https://www.instagram.com" target="_main"><ion-icon name="logo-instagram"></ion-icon></a>
+    <a class="i3" href="https://www.twitter.com" target="_main"><ion-icon name="logo-twitter"></ion-icon></a>
+    <a class="i4" href="https://www.youtube.com" target="_main"><ion-icon name="logo-youtube"></ion-icon></a>
+    <a class="i5" href="https://www.skype.com" target="_main"><ion-icon name="logo-skype"></ion-icon></a>
+</div>
+ <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        </footer>
+  </body>
+</html>

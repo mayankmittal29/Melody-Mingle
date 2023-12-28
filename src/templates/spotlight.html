@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Spotlight</title>
+<link href="../static/spotlight.css" rel="stylesheet">
+
+
+</head>
+<body style="background-size: 1920px;">
+
+<!-- <div class="header" style="height: 30px;"> -->
+<div class="topnav" style="background-color: black; padding-left: 32%; height: 8%; padding-top: 1%;" >
+<i style="color: white;position: absolute; left: 30px;font-size: 50px;top: 17px; ">BeatStreet</i>
+<i style="position: absolute;color: white;font-size: 50px;top: 17px; left: 1650px;">AP Dhillon</i>
+
+<a href="/sample" style="font-size: 25px;margin-right: 20px;" >Home</a>
+<a href="/artistpage" style="font-size: 25px;margin-right: 20px;" >Artists</a>
+<a href="/spotlight" style="font-size: 25px;margin-right: 20px;" class="active" >Spotlight</a>
+<a href="/me" style="font-size: 25px;margin-right: 20px;" >About</a>
+<a href="/search" style="font-size: 25px;margin-right: 20px;" >Search</a>
+<a href="/playlist" style="font-size: 25px;margin-right: 20px;" >Playlist</a>
+</div>
+</div>
+
+<img class="artist-image" src="../static/spotlightwebp1.webp" alt="AP" style="z-index:-100;">
+<b class="aboutap" style="color: white;">Amritpal Singh Dhillon (born 10 January 1993),</br></br> known professionally as AP Dhillon, is an Indo-Canadian singer,</br></br> rapper and record producer associated with Punjabi music. </br></br>Five of his singles have peaked on the Official Charts Company</br></br> UK Asian and Punjabi charts, while "Majhail" and "Brown Munde" have topped the chart.</br></br> Dhillon, alongside his patners Gurinder Gill, Shinda Kahlon </br></br>and Gminxr works as trio under their labell 'Run-Up Records'.</b>
+<div style="display: flex; flex-direction: row;">
+<div id="countdown" class="clock"></div>
+
+<div class="review-box" style="background-color: tomato; z-index: -1002;">
+<h1>Artist Reviews</h1>
+<label for="artist_name">Artist Name:</label>
+<input type="text" id="artist_name"><br><br>
+<label for="user_name">Your Name:</label>
+<input type="text" id="user_name"><br><br>
+<label for="rating">Rating:</label>
+<input type="radio" id="rating1" name="rating" value="1"><label for="rating1">1</label>
+<input type="radio" id="rating2" name="rating" value="2"><label for="rating2">2</label>
+<input type="radio" id="rating3" name="rating" value="3"><label for="rating3">3</label>
+<input type="radio" id="rating4" name="rating" value="4"><label for="rating4">4</label>
+<input type="radio" id="rating5" name="rating" value="5"><label for="rating5">5</label><br><br>
+<label for="review">Review:</label>
+<textarea id="review" rows="4" cols="50"></textarea><br><br>
+<button onclick="submitReview()">Submit</button><br><br>
+<table id="reviews_table" style="border: black solid; color: white; z-index: -1001;" CELLSPACING="0">
+<thead>
+<tr>
+<th>Artist Name</th>
+<th>User Name</th>
+<th>Rating</th>
+<th>Review</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+
+<script src="../static/spotlight.js"></script>
+
+</body>
+<footer>
+<!-- <p color = "white" style="left: 100px;">About</p> -->
+<p style="font-size: 20px;position: absolute; left: 20px; text-align: left;bottom: 10px;">
+<br>At BeatStreet, our mission is to create music that inspires and connects people.<br> We believe in the power of music to bring people together, to heal, to uplift, and to transform.</br>
+We are grateful for your support and we hope our music can make a positive impact on your life.
+</p>
+<a href="/me" style="color: beige; position:absolute; bottom: 25px; left: 1500px;font-size: 30px;text-decoration: none; ">About</a>
+<div class="icons" style="position: absolute; bottom: -17px;">
+<a class="i1" href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a>
+<a class="i2" href="https://www.instagram.com" target="_main"><ion-icon name="logo-instagram"></ion-icon></a>
+<a class="i3" href="https://www.twitter.com" target="_main"><ion-icon name="logo-twitter"></ion-icon></a>
+<a class="i4" href="https://www.youtube.com" target="_main"><ion-icon name="logo-youtube"></ion-icon></a>
+<a class="i5" href="https://www.skype.com" target="_main"><ion-icon name="logo-skype"></ion-icon></a>
+</div>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</footer>
+</html>
